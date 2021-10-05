@@ -4,7 +4,7 @@
  class template{
 
     public function template_header($title) {
-        echo <<<EOT
+        $header=<<<EOT
         <!DOCTYPE html>
         <html>
             <head>
@@ -34,28 +34,29 @@
                 </div>
             </nav>
         EOT;
+        echo $header;
     }
 
     public function template_welcome(){
-        echo <<<EOT
+        $welcome=<<<EOT
             <div class="content">
             <h2>Home</h2>
             <p>Welcome to the home page!</p>
             </div>
         EOT;
+        echo $welcome;
     }
 
     public function template_footer($text_footer) {
-        echo <<<EOT
+        $footer=<<<EOT
                 <div class="fixed-footer">
                     <div class="container">$text_footer</div>        
                 </div>
             </body>
         </html>
         EOT;
+        echo $footer;
     }
 
  }
-
-
  ?>
